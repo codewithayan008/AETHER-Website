@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AETHER — Experience the web differently.</title>
   <meta name="description" content="Spatial glassmorphism new-tab experience for Chrome with customizable widgets, dynamic wallpapers, and zero-telemetry privacy shield.">
-  <link rel="icon" type="image/png" href="../extension/icons/icon48.png">
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
 
   <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website">
@@ -50,6 +50,12 @@
       </div>
 
       <div class="nav-cta-group">
+        <a href="https://github.com/codewithayan008/AETHER-Extension" target="_blank" rel="noopener noreferrer" class="btn-github-nav glass-card" title="View Source on GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
         <a href="#install" class="btn-primary-glow">Add to Chrome</a>
       </div>
     </nav>
@@ -80,12 +86,11 @@
           </svg>
           <span>How to Add to Chrome</span>
         </a>
-        <a href="#demo" class="btn-hero-secondary glass-card">
-          <span>Try Interactive Demo</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"/>
-            <polyline points="12 5 19 12 12 19"/>
+        <a href="https://github.com/codewithayan008/AETHER-Extension" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary glass-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
           </svg>
+          <span>GitHub Repo</span>
         </a>
       </div>
 
@@ -245,9 +250,38 @@
 
     <div class="install-grid">
       
-      <!-- Step 1 Card -->
+      <!-- Step 1 Card: Download from GitHub -->
       <div class="step-card glass-card">
         <div class="step-number">01</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Download Extension</h3>
+        <p class="step-desc">
+          Download the latest extension files from the official GitHub repository:
+        </p>
+        <a href="https://github.com/codewithayan008/AETHER-Extension/archive/refs/heads/main.zip" class="btn-step-download" target="_blank" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Download .ZIP</span>
+        </a>
+        <div class="code-copy-box">
+          <code>git clone https://github.com/codewithayan008/AETHER-Extension.git</code>
+          <button class="copy-btn" data-copy="git clone https://github.com/codewithayan008/AETHER-Extension.git">Copy</button>
+        </div>
+        <p class="step-desc">Extract the downloaded ZIP to an easily accessible folder on your computer.</p>
+      </div>
+
+      <!-- Step 2 Card: Open Chrome Extensions -->
+      <div class="step-card glass-card">
+        <div class="step-number">02</div>
         <div class="step-icon-box">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
@@ -266,9 +300,9 @@
         <p class="step-desc">Toggle the <strong>Developer mode</strong> switch in the top-right corner to <strong>ON</strong>.</p>
       </div>
 
-      <!-- Step 2 Card -->
+      <!-- Step 3 Card: Load Unpacked -->
       <div class="step-card glass-card highlight-step">
-        <div class="step-number">02</div>
+        <div class="step-number">03</div>
         <div class="step-icon-box">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
@@ -276,18 +310,18 @@
         </div>
         <h3 class="step-title">Click "Load Unpacked"</h3>
         <p class="step-desc">
-          Click the <strong>Load unpacked</strong> button in the top-left toolbar, then select the extension folder:
+          Click <strong>Load unpacked</strong> in the top-left toolbar, then select the extracted folder:
         </p>
         <div class="code-copy-box">
-          <code id="folder-path-display">/home/ayan/Projects/Arther/apps/extension</code>
-          <button class="copy-btn" data-copy="/home/ayan/Projects/Arther/apps/extension">Copy Path</button>
+          <code>AETHER-Extension</code>
+          <span class="folder-hint">unzipped folder</span>
         </div>
-        <p class="step-desc">Click <strong>Select Folder</strong> to instantly register the extension.</p>
+        <p class="step-desc">Select the folder (the one containing <code>manifest.json</code>) and click <strong>Select Folder</strong>.</p>
       </div>
 
-      <!-- Step 3 Card -->
+      <!-- Step 4 Card: Open New Tab -->
       <div class="step-card glass-card">
-        <div class="step-number">03</div>
+        <div class="step-number">04</div>
         <div class="step-icon-box">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -307,10 +341,20 @@
     <!-- Quick Action Banner -->
     <div class="quick-download-banner glass-card">
       <div class="banner-text">
-        <h4>Want to test right now in your current browser?</h4>
-        <p>You can also preview the new tab page as a standalone web page without installing.</p>
+        <h4>Official GitHub Repository</h4>
+        <p>Star the repository, explore the Manifest V3 architecture, or download the latest release files.</p>
       </div>
-      <a href="../extension/newtab.html" target="_blank" class="btn-primary-glow">Open Direct Preview</a>
+      <div class="banner-actions">
+        <a href="https://github.com/codewithayan008/AETHER-Extension" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary glass-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;margin-right:6px;">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>View on GitHub</span>
+        </a>
+        <a href="https://github.com/codewithayan008/AETHER-Extension/archive/refs/heads/main.zip" class="btn-primary-glow" target="_blank" download>
+          Download Extension (.zip)
+        </a>
+      </div>
     </div>
   </section>
 
@@ -520,10 +564,10 @@
         </div>
         <div class="f-col">
           <span class="f-title">Open Source</span>
-          <a href="../../README.md">README</a>
-          <a href="../../docs/architecture.md">Architecture</a>
-          <a href="../../docs/privacy-policy.md">Privacy Policy</a>
-          <a href="../../LICENSE">MIT License</a>
+          <a href="https://github.com/codewithayan008/AETHER-Extension#readme" target="_blank" rel="noopener noreferrer">README</a>
+          <a href="https://github.com/codewithayan008/AETHER-Extension" target="_blank" rel="noopener noreferrer">Extension Repo</a>
+          <a href="https://github.com/codewithayan008/AETHER-Website" target="_blank" rel="noopener noreferrer">Website Repo</a>
+          <a href="https://github.com/codewithayan008/AETHER-Extension/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
         </div>
       </div>
     </div>
