@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHER — Experience the web differently.</title>
+  <meta name="description" content="Spatial glassmorphism new-tab experience for Chrome with customizable widgets, dynamic wallpapers, and zero-telemetry privacy shield.">
+  <link rel="icon" type="image/png" href="../extension/icons/icon48.png">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AETHER — Experience the web differently.">
+  <meta property="og:description" content="Spatial glassmorphism new-tab experience for Chrome with customizable widgets, dynamic wallpapers, and zero-telemetry privacy shield.">
+  <meta property="og:image" content="./public/og-image.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AETHER — Experience the web differently.">
+  <meta name="twitter:description" content="Spatial glassmorphism new-tab experience for Chrome with customizable widgets, dynamic wallpapers, and zero-telemetry privacy shield.">
+  <meta name="twitter:image" content="./public/og-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+
+  <!-- Interactive Spotlight Glow -->
+  <div id="mouse-spotlight" class="mouse-spotlight"></div>
+  <div class="ambient-nebula nebula-1"></div>
+  <div class="ambient-nebula nebula-2"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar glass-card">
+      <a href="#" class="brand-link">
+        <svg class="brand-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+          <line x1="12" y1="22" x2="12" y2="15.5" />
+          <polyline points="22 8.5 12 15.5 2 8.5" />
+          <line x1="12" y1="2" x2="12" y2="8.5" />
+        </svg>
+        <span class="brand-title">AETHER</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#demo">Live Demo</a>
+        <a href="#features">Features</a>
+        <a href="#shield">Privacy Shield</a>
+        <a href="#install">How to Install</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="nav-cta-group">
+        <a href="#install" class="btn-primary-glow">Add to Chrome</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="pill-badge glass-card">
+        <span class="badge-dot"></span>
+        <span>AETHER 1.0 — Spatial New Tab & Privacy Shield</span>
+      </div>
+
+      <h1 class="hero-title">
+        Experience the web <br>
+        <span class="gradient-text">differently.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Transform your Chrome new-tab into a spatial frosted-glass workstation. Inspired by Apple visionOS, engineered for sub-100ms speed, and built with zero telemetry.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#install" class="btn-hero-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 8 12 12 14 14"/>
+          </svg>
+          <span>How to Add to Chrome</span>
+        </a>
+        <a href="#demo" class="btn-hero-secondary glass-card">
+          <span>Try Interactive Demo</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-row">
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Zero History Logging</span>
+        </div>
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          <span>Sub-100ms Load Time</span>
+        </div>
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <span>100% Open Source (MIT)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Simulator Demo Section -->
+  <section id="demo" class="demo-section">
+    <div class="section-header">
+      <span class="section-tag">Interactive Preview</span>
+      <h2 class="section-title">Test the New Tab Right Here</h2>
+      <p class="section-subtitle">Interact with the clock, change wallpapers, switch search engines, and test the focus timer in real time.</p>
+    </div>
+
+    <!-- Simulator Container Window -->
+    <div class="simulator-window glass-card">
+      <div class="window-chrome">
+        <div class="window-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="window-title-pill">chrome://newtab — AETHER Simulation</div>
+        <div class="window-controls">
+          <span class="sim-badge">Live Interactive Mode</span>
+        </div>
+      </div>
+
+      <div id="sim-canvas" class="sim-body wallpaper-aurora">
+        
+        <!-- Simulator Top Bar -->
+        <div class="sim-top">
+          <div class="sim-brand glass-card">
+            <svg class="brand-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+            </svg>
+            <span>AETHER</span>
+          </div>
+
+          <div class="sim-top-actions">
+            <!-- Wallpaper Changer inside Simulator -->
+            <div class="sim-wp-toggles">
+              <button class="sim-wp-btn active" data-sim-wp="aurora">Aurora</button>
+              <button class="sim-wp-btn" data-sim-wp="space">Nebula</button>
+              <button class="sim-wp-btn" data-sim-wp="obsidian">Obsidian</button>
+              <button class="sim-wp-btn" data-sim-wp="glass">Liquid</button>
+            </div>
+
+            <button id="sim-shield-pill" class="sim-shield-pill glass-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>Shield Active</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulator Center Stage -->
+        <div class="sim-center">
+          <div class="sim-loc-pill glass-card">
+            <span>📍</span>
+            <span id="sim-loc-text">Detecting location...</span>
+            <span id="sim-weather-text" class="sim-weather-text"></span>
+          </div>
+          <div id="sim-greeting" class="sim-greeting">Good evening</div>
+          <div id="sim-clock" class="sim-clock">18:42</div>
+          <div id="sim-date" class="sim-date">Saturday, November 22</div>
+
+          <!-- Simulator Search Bar -->
+          <div class="sim-search-card glass-card">
+            <span id="sim-engine-icon" class="sim-engine-icon">🦆</span>
+            <input type="text" id="sim-search-input" class="sim-search-input" placeholder="Search the web with DuckDuckGo...">
+            <button id="sim-search-submit" class="sim-search-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Simulator Shortcuts Dock -->
+          <div class="sim-shortcuts-dock glass-card">
+            <a href="https://github.com" target="_blank" class="sim-sc-item">
+              <span class="sim-sc-icon">🐙</span>
+              <span>GitHub</span>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="sim-sc-item">
+              <span class="sim-sc-icon">▶️</span>
+              <span>YouTube</span>
+            </a>
+            <a href="https://reddit.com" target="_blank" class="sim-sc-item">
+              <span class="sim-sc-icon">🤖</span>
+              <span>Reddit</span>
+            </a>
+            <a href="https://wikipedia.org" target="_blank" class="sim-sc-item">
+              <span class="sim-sc-icon">📚</span>
+              <span>Wikipedia</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Simulator Bottom Widgets -->
+        <div class="sim-footer">
+          <div class="sim-widget-card glass-card">
+            <div class="sim-widget-hdr">
+              <span>Quick Notes</span>
+              <span class="sim-tag">Auto-Saved</span>
+            </div>
+            <textarea id="sim-notes" class="sim-notes-input" placeholder="Try typing notes here..."></textarea>
+          </div>
+
+          <div class="sim-widget-card glass-card">
+            <div class="sim-widget-hdr">
+              <span>Focus Timer</span>
+              <span class="sim-tag">Pomodoro</span>
+            </div>
+            <div class="sim-timer-box">
+              <span id="sim-timer-digits" class="sim-timer-digits">25:00</span>
+              <button id="sim-timer-btn" class="sim-btn-pill">Start</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Install & Add to Chrome Section -->
+  <section id="install" class="install-section">
+    <div class="section-header">
+      <span class="section-tag">Instant Setup</span>
+      <h2 class="section-title">How to Add AETHER to Chrome</h2>
+      <p class="section-subtitle">Load AETHER in under 60 seconds with Chrome Developer Mode.</p>
+    </div>
+
+    <div class="install-grid">
+      
+      <!-- Step 1 Card -->
+      <div class="step-card glass-card">
+        <div class="step-number">01</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Open Chrome Extensions</h3>
+        <p class="step-desc">
+          Open Google Chrome and navigate to the extensions manager by typing:
+        </p>
+        <div class="code-copy-box">
+          <code>chrome://extensions</code>
+          <button class="copy-btn" data-copy="chrome://extensions">Copy</button>
+        </div>
+        <p class="step-desc">Toggle the <strong>Developer mode</strong> switch in the top-right corner to <strong>ON</strong>.</p>
+      </div>
+
+      <!-- Step 2 Card -->
+      <div class="step-card glass-card highlight-step">
+        <div class="step-number">02</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Click "Load Unpacked"</h3>
+        <p class="step-desc">
+          Click the <strong>Load unpacked</strong> button in the top-left toolbar, then select the extension folder:
+        </p>
+        <div class="code-copy-box">
+          <code id="folder-path-display">/home/ayan/Projects/Arther/apps/extension</code>
+          <button class="copy-btn" data-copy="/home/ayan/Projects/Arther/apps/extension">Copy Path</button>
+        </div>
+        <p class="step-desc">Click <strong>Select Folder</strong> to instantly register the extension.</p>
+      </div>
+
+      <!-- Step 3 Card -->
+      <div class="step-card glass-card">
+        <div class="step-number">03</div>
+        <div class="step-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Open a New Tab</h3>
+        <p class="step-desc">
+          Press <strong>Ctrl + T</strong> (or <strong>Cmd + T</strong>) to open a new tab.
+        </p>
+        <p class="step-desc">
+          AETHER immediately replaces the blank tab with your spatial glass workstation and active Shield protection!
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Quick Action Banner -->
+    <div class="quick-download-banner glass-card">
+      <div class="banner-text">
+        <h4>Want to test right now in your current browser?</h4>
+        <p>You can also preview the new tab page as a standalone web page without installing.</p>
+      </div>
+      <a href="../extension/newtab.html" target="_blank" class="btn-primary-glow">Open Direct Preview</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="section-header">
+      <span class="section-tag">Designed with Purpose</span>
+      <h2 class="section-title">Engineered Beyond Themes</h2>
+      <p class="section-subtitle">Every element of AETHER is built for privacy, performance, and aesthetic delight.</p>
+    </div>
+
+    <div class="features-grid">
+      
+      <div class="feature-card glass-card">
+        <div class="feature-icon-box icon-cyan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">VisionOS Spatial Glass</h3>
+        <p class="feature-desc">Translucent frosted cards, subtle light refractions, layered depth, and fluid 60fps GPU-composited animations.</p>
+      </div>
+
+      <div class="feature-card glass-card">
+        <div class="feature-icon-box icon-emerald">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">AETHER Shield Privacy</h3>
+        <p class="feature-desc">Ad and tracker filtering executed natively at the browser network layer using Chrome's declarativeNetRequest API.</p>
+      </div>
+
+      <div class="feature-card glass-card">
+        <div class="feature-icon-box icon-violet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Zero-Telemetry Guarantee</h3>
+        <p class="feature-desc">No browsing history collection, no remote databases, no mandatory accounts. All notes and preferences stay on your device.</p>
+      </div>
+
+      <div class="feature-card glass-card">
+        <div class="feature-icon-box icon-purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Deep Customization</h3>
+        <p class="feature-desc">Switch between dynamic wallpapers (Aurora, Nebula, Obsidian), 12h/24h formats, blur levels, and custom photo uploads.</p>
+      </div>
+
+      <div class="feature-card glass-card">
+        <div class="feature-icon-box icon-amber">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Built-In Productivity</h3>
+        <p class="feature-desc">Instant local scratchpad notes and a Pomodoro focus timer to keep your workflow grounded and focused.</p>
+      </div>
+
+      <div class="feature-card glass-card">
+        <div class="feature-icon-box icon-rose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">100% Open Source</h3>
+        <p class="feature-desc">Inspect every line of code on GitHub. Licensed under the MIT License for community trust and collaboration.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shield Deep Dive Section -->
+  <section id="shield" class="shield-section">
+    <div class="shield-layout glass-card">
+      <div class="shield-text">
+        <div class="pill-badge glass-card">
+          <span class="badge-dot dot-emerald"></span>
+          <span>AETHER Shield Engine</span>
+        </div>
+        <h2 class="shield-headline">Private by architecture, not by promise.</h2>
+        <p class="shield-desc">
+          Most extensions promise privacy while actively collecting your browsing habits. AETHER Shield works differently: it never requests the <code>history</code> permission and performs all content filtering using native Chrome declarative rules.
+        </p>
+        <ul class="shield-bullets">
+          <li><strong>Zero Payload Snooping:</strong> Extension scripts never inspect or store the contents of your HTTP packets.</li>
+          <li><strong>Native Network Layer:</strong> Rules execute inside Chrome's C++ network stack for maximum speed and zero memory overhead.</li>
+          <li><strong>Instant Allowlist:</strong> Easily exempt trustworthy sites directly from the toolbar popup.</li>
+        </ul>
+      </div>
+
+      <!-- Interactive Shield Visualizer -->
+      <div class="shield-visualizer">
+        <div class="shield-control-card glass-card">
+          <div class="shield-ctrl-header">
+            <span>AETHER Shield Status</span>
+            <button id="toggle-shield-demo" class="shield-toggle-btn active">Active</button>
+          </div>
+          <div class="shield-telemetry-list">
+            <div class="telemetry-item blocked">
+              <span class="t-badge">BLOCKED</span>
+              <span class="t-domain">doubleclick.net</span>
+              <span class="t-type">Ad Tracker</span>
+            </div>
+            <div class="telemetry-item blocked">
+              <span class="t-badge">BLOCKED</span>
+              <span class="t-domain">google-analytics.com</span>
+              <span class="t-type">Telemetry</span>
+            </div>
+            <div class="telemetry-item blocked">
+              <span class="t-badge">BLOCKED</span>
+              <span class="t-domain">hotjar.com</span>
+              <span class="t-type">Behavior Logger</span>
+            </div>
+            <div class="telemetry-item allowed">
+              <span class="t-badge badge-green">ALLOWED</span>
+              <span class="t-domain">github.com</span>
+              <span class="t-type">Primary Content</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">Common Inquiries</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-container">
+      
+      <div class="faq-item glass-card">
+        <button class="faq-question">
+          <span>Is AETHER completely free and open source?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. AETHER is 100% open source under the MIT License. The code is transparent, auditable, and open to community contributions on GitHub.</p>
+        </div>
+      </div>
+
+      <div class="faq-item glass-card">
+        <button class="faq-question">
+          <span>Does AETHER collect or store my browsing history?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No. AETHER does not request the <code>history</code> permission in its manifest and does not transmit any URLs or search queries to any external server.</p>
+        </div>
+      </div>
+
+      <div class="faq-item glass-card">
+        <button class="faq-question">
+          <span>How does AETHER Shield block ads and trackers?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>AETHER Shield uses Chrome Manifest V3's native <code>declarativeNetRequest</code> API. The browser itself matches outgoing requests against curated local rule lists, blocking them before they ever load.</p>
+        </div>
+      </div>
+
+      <div class="faq-item glass-card">
+        <button class="faq-question">
+          <span>Can I use my own custom wallpapers?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. In the Preferences drawer, you can upload any custom photo from your computer. It is stored securely in your browser's local storage and never leaves your device.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner glass-card">
+      <div class="footer-brand">
+        <div class="brand-link">
+          <svg class="brand-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+          </svg>
+          <span class="brand-title">AETHER</span>
+        </div>
+        <p class="footer-tagline">Experience the web differently.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="f-col">
+          <span class="f-title">Product</span>
+          <a href="#demo">Live Demo</a>
+          <a href="#install">Install Extension</a>
+          <a href="#features">Features</a>
+        </div>
+        <div class="f-col">
+          <span class="f-title">Open Source</span>
+          <a href="../../README.md">README</a>
+          <a href="../../docs/architecture.md">Architecture</a>
+          <a href="../../docs/privacy-policy.md">Privacy Policy</a>
+          <a href="../../LICENSE">MIT License</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AETHER. Engineered with privacy and spatial design.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
